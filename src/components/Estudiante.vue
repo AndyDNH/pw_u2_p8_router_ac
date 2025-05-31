@@ -1,9 +1,7 @@
 <template>
   <div class="container">
-
     <div v-show="mostrar">
       <h1>Estudiante Guardado</h1>
-      
     </div>
     <div class="textos">
       <label for="id_nombre">Nombre</label>
@@ -25,7 +23,7 @@
     <br />
     <button v-on:click="agregarEstudiante"><b>Agregar</b></button>
 
-    <button v-on:click="obtenerPathVariable"> Llamar metodo</button>
+    <button v-on:click="obtenerPathVariable">Llamar metodo</button>
     <ul>
       <li
         v-for="{ nombre, apellido, genero, edad, correo } in lista"
@@ -98,7 +96,7 @@ export default {
           correo: "anahis@gmail.com",
         },
       ],
-      mostrar:true,
+      mostrar: true,
     };
   },
   methods: {
@@ -110,25 +108,55 @@ export default {
         edad: this.nuevaEdad,
         correo: this.nuevoCorreo,
       };
-      
+
       // this.lista.unshift(nuevo);
       this.lista.push(nuevo);
       this.mostrar = true;
       this.nombre = null;
 
       setTimeout(() => {
-        this.mostrar=false;
+        this.mostrar = false;
       }, 3000);
     },
-    obtenerPathVariable(){
-        const CEDULA = this.$route.params.cedula;
-        console.log(CEDULA)
-        const anio = this.$route.query.anio;
-        const mes =this.$route.query.mes;
-        console.log(anio)
-        console.log(mes)
-    }
-    
+    obtenerPathVariable() {
+      const CEDULA = this.$route.params.cedula;
+      console.log(CEDULA);
+
+      const anio = this.$route.query.anio;
+      const mes = this.$route.query.mes;
+      console.log(anio);
+      console.log(mes);
+    },
+    // las etapas de ciclo de vida son fundamentales para gestionar la carga de datos, limpieza de eventos y cada una de las etapas del ciclo de vida de un componente se lo declara como una opcion mas de option api
+  },
+  beforeCreate() {
+    console.log("beforeCreate");
+  },
+  created() {
+    console.log("created");
+  },
+  beforeMount() {
+    console.log("before mount");
+  },
+  mounted() {
+    console.log("mounted");
+    const CEDULA = this.$route.params.cedula;
+    console.log(CEDULA);
+
+    const anio = this.$route.query.anio;
+    const mes = this.$route.query.mes;
+    console.log(anio);
+    console.log(mes);
+  },
+  beforeUpdate() {},
+  updated() {
+    console.log("updated");
+  },
+  beforeUnmount() {
+    console.log("beforeUnmount");
+  },
+  unmounted() {
+    console.log("unmounted");
   },
 };
 </script>
@@ -178,17 +206,16 @@ button {
 }
 
 ul {
-    list-style: none;
-    margin-top: 30px;
-    
+  list-style: none;
+  margin-top: 30px;
 }
 
 li {
-    background: #7ec2fd;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    color: #333;
-    font-size: 20px;
+  background: #7ec2fd;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 20px;
 }
 </style>

@@ -11,6 +11,10 @@
 
     <router-link to="/hola">Hola Mundo</router-link> |
     <router-link to="/tabla">Tabla</router-link> |
+
+    <router-link to="/pokemon">Pokemon</router-link> |
+      
+
   </nav>
 </template>
 

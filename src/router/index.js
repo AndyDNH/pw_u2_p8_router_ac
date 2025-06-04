@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import EstudianteView from '../views/EstudianteView.vue'
 import PreguntaView from '../views/PreguntaView.vue'
 import HolaMundoView from '../views/HolaMundoView.vue'
+import PokemonView from '../views/PokemonView.vue'
 
 
 const routes = [
@@ -28,6 +29,11 @@ const routes = [
     path: '/hola',
     name: 'holaView',
     component: HolaMundoView
+  },
+  {
+    path: '/pokemon',
+    name: 'pokemonView',
+    component: PokemonView
   },
   // involucra una carga bajo demanda
   {

@@ -1,11 +1,11 @@
 <template>
   <div class="image-container">
-  <img v-if="!mostrar"
-  class="ocultar" 
-  :src="imagenFuente"  alt="No se pudo renderizar la imagen">
-  <img v-if="mostrar"
-  :src="imagenFuente" 
-  alt="No se pudo renderizar la imagen">
+    <img v-if="!mostrar"
+    class="ocultar" 
+    :src="imagenFuente"  alt="No se pudo renderizar la imagen">
+    <img v-if="mostrar"
+    :src="imagenFuente" 
+    alt="No se pudo renderizar la imagen">
   </div>
 </template>
 

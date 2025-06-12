@@ -1,7 +1,10 @@
 <template>
+  {{mensaje2 }}
   <div class="options-container">
+    
     <ul>
-      <li v-for="pokemon in pokemons" :key="pokemon.id">{{ pokemon.nombre }}</li>
+      <li @click="comunicarClic(pokemon.id)" v-for="pokemon in pokemons" 
+      :key="pokemon.id">{{ pokemon.nombre }}</li>
       
     </ul>
   </div>
@@ -15,7 +18,31 @@ export default {
          type:Array,
          required:true
       }
+
    },
+   data(){
+    return{
+      mensaje2:'mensaje2'
+    }
+   },
+   methods:{
+    // comunicar desde cualquier parte no solo desde un metodo puedo llamar a una funcion
+    // llamada como $emit
+    comunicarClic(id){
+      console.log("Se dio clic");
+      console.log(id);
+      // lo que quiero enviar lo coloco como segundo argumento del emit
+      const objetoEnviado={
+        atributo:id,
+        atributo2:"Edison",
+        atributo3:true
+      }
+      
+      this.$emit('seleccionado',objetoEnviado )
+
+      
+    }
+   }
 
 };
 </script>

@@ -13,6 +13,8 @@
     <router-link to="/tabla">Tabla</router-link> |
 
     <router-link to="/pokemon">Pokemon</router-link> |
+    <router-link to="/responsivo">Responsivo</router-link> |
+
       
 
   </nav>

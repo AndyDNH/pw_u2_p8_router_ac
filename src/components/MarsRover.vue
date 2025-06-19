@@ -51,7 +51,7 @@ export default {
 
 
 
-<style>
+<style scoped>
 .fotos {
     display: flex;
     flex-wrap: wrap;

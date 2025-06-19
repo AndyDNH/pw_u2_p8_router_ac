@@ -37,14 +37,14 @@ export default {
       console.log(this.pokemon.nombre);
       
     },
-    recibioPadre(id){
-      console.log("Mensaje recibido desde Hijo");
-      console.log(id);
-      this.mostrar = true
-      console.log(this.mostrar);
-      this.validarRespuesta(id.atributo);
-      
-    },
+      recibioPadre(id){
+        console.log("Mensaje recibido desde Hijo");
+        console.log(id);
+        this.mostrar = true
+        console.log(this.mostrar);
+        this.validarRespuesta(id.atributo);
+        
+      },
     validarRespuesta(opcionSeleccionada){
       if (opcionSeleccionada===this.pokemon.id) {
         this.mensaje= "Correcto";

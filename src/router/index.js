@@ -4,6 +4,7 @@ import EstudianteView from '../views/EstudianteView.vue'
 import PreguntaView from '../views/PreguntaView.vue'
 import HolaMundoView from '../views/HolaMundoView.vue'
 import PokemonView from '../views/PokemonView.vue'
+import ComponenteResponsivoView from '../views/ComponenteResponsivoView.vue'
 
 
 const routes = [
@@ -34,6 +35,11 @@ const routes = [
     path: '/pokemon',
     name: 'pokemonView',
     component: PokemonView
+  },
+  {
+    path: '/responsivo',
+    name: 'componenteResponsivo',
+    component: ComponenteResponsivoView
   },
   // involucra una carga bajo demanda
   {

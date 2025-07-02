@@ -5,6 +5,8 @@ import PreguntaView from '../views/PreguntaView.vue'
 import HolaMundoView from '../views/HolaMundoView.vue'
 import PokemonView from '../views/PokemonView.vue'
 import ComponenteResponsivoView from '../views/ComponenteResponsivoView.vue'
+import EstudianteRestView from '../views/EstudianteRestView.vue'
+import EstudianteIdView from '../views/EstudianteIdView.vue'
 
 
 const routes = [
@@ -40,6 +42,16 @@ const routes = [
     path: '/responsivo',
     name: 'componenteResponsivo',
     component: ComponenteResponsivoView
+  },
+  {
+    path: '/erest',
+    name: 'estudianterest',
+    component: EstudianteRestView
+  },
+  {
+    path: '/estudianteid',
+    name: 'estudianteid',
+    component: EstudianteIdView
   },
   // involucra una carga bajo demanda
   {

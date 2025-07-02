@@ -15,6 +15,9 @@
     <router-link to="/pokemon">Pokemon</router-link> |
     <router-link to="/responsivo">Responsivo</router-link> |
 
+    <router-link to="/erest">EstudianteRest</router-link> |
+    <router-link to="/estudianteid">Consultar Estudiante</router-link> |
+
       
 
   </nav>

@@ -18,7 +18,7 @@ const consultarRespuesta = async ()=>{
 // todo metodo que lleve la palabra reservada await y en donde sea que se use el metodo tiene que llevar async
 
 export const consultarRespuestaFachada = async() => {
-    // aqui si se usa await
+
     return  await consultarRespuesta();
 }
 
